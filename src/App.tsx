@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { RajzfilmLista } from "./Components/RajzfilmLista/RajzfilmLista"
 import { ReadData } from "./Helper_scripts/ReadData"
 import type { Rajzfilm_interface } from "./Models/Interfaces/Rajzfilm.interface"
+import { RajzfilmStat } from "./Components/RajzfilmStat/RajzfilmStat"
 export function App() {
   const [rajzfilmek, setRajzfilmek] = useState<Rajzfilm_interface[]>([])
   useEffect(() => {
@@ -15,6 +16,7 @@ export function App() {
   return (
     <div className="container">
       <h1>Rajzfilmek</h1>
+      <RajzfilmStat rajzfilmek={rajzfilmek}></RajzfilmStat>
       <RajzfilmLista rajzfilmek={rajzfilmek}></RajzfilmLista>
     </div>
   )
