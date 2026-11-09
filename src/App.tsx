@@ -15,7 +15,7 @@ export function App() {
   return (
     <div className="container">
       <h1>Rajzfilmek</h1>
-      <RajzfilmLista></RajzfilmLista>
+      <RajzfilmLista rajzfilmek={rajzfilmek}></RajzfilmLista>
     </div>
   )
 }
